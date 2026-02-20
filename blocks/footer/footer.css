@@ -1,6 +1,13 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--black-color);
   font-size: var(--body-font-size-xs);
+  color: var(--white-color);
+}
+
+footer a:any-link {
+    color: var(--light-color);
+    text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 footer .footer > div {
@@ -11,6 +18,11 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+  color: var(--light-color);
+}
+
+footer .footer p a{
+  text-decoration: underline;
 }
 
 @media (width >= 900px) {
