@@ -142,6 +142,7 @@
 
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: 80%;
+
     margin: auto;
     margin-bottom:0;
     margin-top: 400px;
@@ -152,7 +153,7 @@
   }
 }
 
-/*custom properties for carousel section*/
+/* custom properties for carousel section */
 
 main > .section > div.carousel-wrapper {
     max-width: 100%;
@@ -163,7 +164,7 @@ main > .section > div.carousel-wrapper {
   display: inline-block;
   min-width: 120px;
   padding: 16px 36px;
-  border-radius: 0px;
+  border-radius: 0;
   border: none;
   background: #ffd200;
   color: #222;
