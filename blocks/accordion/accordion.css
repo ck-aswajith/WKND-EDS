@@ -1,0 +1,109 @@
+
+.accordion {
+  --accordion-border: 1px solid rgb(0 0 0 / 10%);
+  --accordion-bg: #fff;
+  --accordion-muted: #666;
+  --accordion-shadow: 0 1px 2px rgb(0 0 0 / 6%);
+}
+
+.accordion .accordion-items {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: var(--accordion-border);
+  background: var(--accordion-bg);
+  box-shadow: var(--accordion-shadow);
+  overflow: hidden;
+}
+
+.accordion .accordion-item details {
+  transition: all 0.3s ease;
+}
+
+.accordion .accordion-item details[open] {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.accordion summary.accordion-question {
+  list-style: none;
+  cursor: pointer;
+  padding: 0.85rem 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.accordion summary.accordion-question::-webkit-details-marker {
+  display: none;
+}
+
+.accordion summary.accordion-question::after {
+  content: '';
+  position: absolute;
+  right: calc(1rem - 7px);
+  top: 50%;
+  width: 14px;
+  height: 3px;
+  background: var(--accordion-muted);
+  transition: all 0.3s ease;
+  transform: translateY(-50%);
+}
+
+.accordion summary.accordion-question::before {
+  content: '';
+  position: absolute;
+  right: calc(1rem - 1.5px);
+  top: 50%;
+  width: 3px;
+  height: 14px;
+  background: var(--accordion-muted);
+  transition: all 0.3s ease;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: center;
+}
+
+.accordion details[open] > summary.accordion-question::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.accordion .accordion-answer {
+  padding: 0 1rem 1rem;
+  color: #222;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.accordion details[open] .accordion-answer {
+  animation: slide-down 0.3s ease forwards;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10);
+  }
+}
+
+/* When details are closed, run a slideUp */
+.accordion details:not([open]) .accordion-answer {
+  animation: slide-up 0.25s ease forwards;
+}
