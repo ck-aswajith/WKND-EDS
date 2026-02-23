@@ -35,7 +35,7 @@ main > .section > div.featured-article-wrapper {
 }
 
 .featured-article .featured-article-image{
- max-width: 50%;
+ max-width: 70%;
 }
 
 .featured-article .featured-article-image img {
@@ -50,7 +50,7 @@ main > .section > div.featured-article-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 50%;
+  max-width: 30%;
 }
 
 }

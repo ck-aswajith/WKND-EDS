@@ -18,7 +18,9 @@ footer .footer > div {
 
 footer .footer p {
   margin: 0;
+  margin-bottom: 16px;
   color: var(--light-color);
+  font-size: var(--body-font-size-xs);
 }
 
 footer .footer p a{
@@ -28,5 +30,54 @@ footer .footer p a{
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+}
+
+footer .footer-container {
+    display:grid;
+    gap: 60px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+}
+
+footer .footer-container div:nth-child(2) div p{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .footer-container div:last-child {
+    grid-column: 1 / span 2;
+}
+
+footer .footer-social-links ul{
+    list-style: none;
+    display: inline-flex;
+    gap: 16px;
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+}
+
+footer .footer-social-links ul li{
+    filter: invert(1);
+}
+
+@media(width >= 900px) {
+  footer .footer-container div:nth-child(2) div p{
+      flex-direction: row;
+  }
+
+  footer .footer-container {
+      display:grid;
+      gap: 60px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: center;
+  }
+
+  footer .footer-social-links div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 }
