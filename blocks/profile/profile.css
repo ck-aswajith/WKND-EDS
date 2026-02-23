@@ -46,3 +46,39 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   }
+
+.profile.author .profile-row {
+flex-direction: row;
+margin-top: 20px;
+}
+
+.profile.author .profile-content {
+    text-align: start;
+}
+
+.profile.author .profile-row .profile-content .profile-social .button-container .button {
+        padding: 4px 8px;
+        margin: 0;
+}
+
+.profile.author .profile-row .profile-content h3,h5 {
+margin: 0;
+}
+
+
+.profile.author .profile-image img {
+      border-radius: 50%;
+      height: 82px;
+      object-fit: cover;
+      width: 82px;
+}
+
+@media (width >= 900px) {
+    .profile.author > div:first-child {
+    grid-template-columns: 1fr;
+    }
+
+    .profile.author .profile-content {
+        display: contents;
+    }
+    }

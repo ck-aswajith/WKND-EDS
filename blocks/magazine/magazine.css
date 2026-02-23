@@ -1,0 +1,12 @@
+.magazine > div:first-child {
+display: grid;
+gap: 24px;
+grid-template-columns: 1fr;
+}
+
+@media (min-width : 900px) {
+.magazine > div:first-child {
+gap: 64px;
+grid-template-columns: 3fr 1fr;
+}
+}
