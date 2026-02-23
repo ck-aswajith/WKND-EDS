@@ -16,11 +16,10 @@ export default async function decorate(block) {
   // Create a list to display articles
   if (articles.length > 0) {
     const parentDiv = document.createElement('div');
-          parentDiv.classList.add('article-listing-row');
+    parentDiv.classList.add('article-listing-row');
     articles.forEach((article) => {
-      const link = document.createElement('a');
       const itemDiv = document.createElement('div');
-            itemDiv.classList.add('article-listing-item');
+      itemDiv.classList.add('article-listing-item');
       const title = article.title || 'Untitled Article';
       const url = article.path || '#';
       const desc = article.description || 'lorem ipsum dolor sit amet.';
@@ -37,8 +36,7 @@ export default async function decorate(block) {
       d.textContent = desc;
       itemDiv.appendChild(d);
       itemDiv.addEventListener('click', () => {
-      console.log('Navigating to:', url);
-      window.location.href = url;
+        window.location.href = url;
       });
       parentDiv.appendChild(itemDiv);
     });
@@ -48,4 +46,3 @@ export default async function decorate(block) {
     block.textContent = 'No articles found.';
   }
 }
-
