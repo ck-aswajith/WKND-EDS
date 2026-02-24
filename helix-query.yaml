@@ -4,6 +4,8 @@ indices:
   pages:
     include:
       - '/magazine/**'
+    exclude:
+      - '/magazine'
     target: /article-index.json
     properties:
       title:
@@ -15,6 +17,6 @@ indices:
       image:
         select: head > meta[property="og:image"]
         value: attribute(el, 'content')
-      last-modified:
+      lastModified:
         select: head > meta[property="article:modified_time"]
         value: attribute(el, 'content')
