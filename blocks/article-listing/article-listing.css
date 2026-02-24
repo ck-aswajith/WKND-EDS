@@ -3,6 +3,7 @@
   display: grid;
   flex-direction: column;
   cursor: pointer;
+  align-content: flex-start;
 }
 
 .article-listing .article-listing-row .article-listing-item picture img {

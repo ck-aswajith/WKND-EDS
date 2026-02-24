@@ -81,3 +81,8 @@ footer .footer-social-links ul li{
     align-items: center;
   }
 }
+
+footer .footer-container picture img {
+    width: 150px;
+    height: auto;
+}
