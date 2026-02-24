@@ -39,6 +39,10 @@
 
   /* nav height */
   --nav-height: 64px;
+
+  /* button */
+    --body-btn-bg: #ffd200;
+    --body-btn-color: #222;
 }
 
 /* fallback fonts */
@@ -169,32 +173,24 @@ a:hover {
 /* buttons */
 a.button:any-link,
 button {
-  box-sizing: border-box;
-  display: inline-block;
-  max-width: 100%;
-  margin: 12px 0;
-  border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
-  font-family: var(--body-font-family);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 1.25;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
-  cursor: pointer;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+    display: inline-block;
+    padding: 16px 36px;
+    border-radius: 0;
+    border: none;
+    background: var(--body-btn-bg);
+    color: var(--body-btn-color);
+    font-size: var(--body-font-size-xs);
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
   cursor: pointer;
 }
 

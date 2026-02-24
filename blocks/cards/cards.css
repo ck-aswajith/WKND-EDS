@@ -25,3 +25,20 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+/* variation articles */
+.cards.articles > ul > li {
+   border: none;
+   background-color: unset;
+   cursor: pointer;
+}
+
+.cards.articles a:any-link {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    background: unset;
+    padding: 0;
+    text-align: left;
+}

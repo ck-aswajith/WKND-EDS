@@ -194,6 +194,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
+    justify-items: end;
   }
 
   header nav .nav-sections .nav-drop {

@@ -10,9 +10,9 @@ main > .section > div.featured-article-wrapper {
   padding: 16px 36px;
   border-radius: 0;
   border: none;
-  background: #ffd200;
-  color: #222;
-  font-size: 16px;
+  background: var(--body-btn-bg);
+  color: var(--body-btn-color);
+  font-size: var(--body-font-size-xs);
   font-weight: 700;
   text-align: center;
   text-decoration: none;

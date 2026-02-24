@@ -41,14 +41,24 @@
       min-height: calc(100vh - var(--nav-height));
       display: flex;
       align-items: center;
-    }
-
-    main.error .error-number {
-      width: 100%;
+      justify-content: center;
+      text-align: center;
     }
 
     main.error .error-number text {
       font-family: monospace;
+    }
+
+    main.error .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main.error .error-number {
+        display: block;
+        width: 120px;
+        height: auto;
     }
   </style>
   <link rel="stylesheet" href="/styles/lazy-styles.css">
@@ -58,9 +68,11 @@
   <header></header>
   <main class="error">
     <div class="section">
-      <svg viewBox="1 0 38 18" class="error-number">
-        <text x="0" y="17">404</text>
-      </svg>
+        <div class="wrapper">
+            <svg viewBox="0 0 38 18" class="error-number" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-size="16" font-weight="700">404</text>
+            </svg>
+        </div>
       <h2 class="error-message">Page Not Found</h2>
       <p class="button-container">
         <a href="/" class="button secondary error-button-home">Go home</a>
