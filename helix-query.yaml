@@ -4,7 +4,7 @@ indices:
   pages:
     include:
       - '/magazine/**'
-    target: /magazine-index.json
+    target: /article-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
