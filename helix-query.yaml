@@ -1,12 +1,12 @@
-version: 1.1
+version: 1
 
 indices:
-  pages_v1:
+  pages:
     include:
       - '/magazine/**'
     exclude:
       - '/magazine'
-    target: /article-index.json
+    target: /product-index.json
     properties:
       title:
         select: head > meta[property="og:title"]
@@ -18,5 +18,5 @@ indices:
         select: head > meta[property="og:image"]
         value: attribute(el, 'content')
       lastModified:
-        select: head > meta[property="article:modified_time"]
-        value: attribute(el, 'content')
+        select: headers["last-modified"]
+        value: date(el)
