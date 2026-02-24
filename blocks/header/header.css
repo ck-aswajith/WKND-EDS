@@ -56,6 +56,8 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+  padding : 8px 16px;
+  border-radius: 0;
 }
 
 /* hamburger */
@@ -185,6 +187,14 @@ header nav .nav-sections ul > li > ul > li {
   font-weight: 400;
 }
 
+header nav .nav-sections a:any-link:hover,
+header nav .nav-sections a:any-link:focus,
+ header nav a:any-link.active {
+    background-color: var(--body-btn-bg);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
 @media (width >= 900px) {
   header nav .nav-sections {
     display: block;
@@ -225,7 +235,6 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
     margin: 0;
   }
 
