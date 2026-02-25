@@ -177,5 +177,31 @@ main > .section > div.carousel-wrapper {
   box-shadow: 0 2px 8px 0 rgb(0 0 0 / 8%);
 }
 
+.carousel .carousel-slide .carousel-slide-image picture {
+position: relative;
+}
+
+.carousel .carousel-navigation-buttons {
+top: 25%;
+}
+
+.carousel .carousel-slide .carousel-slide-content {
+margin: 0 32px;
+}
+
+@media (width >= 600px) {
+.carousel .carousel-slide .carousel-slide-image picture {
+position: absolute;
+}
+
+.carousel .carousel-navigation-buttons {
+top: 50%;
+}
+
+.carousel .carousel-slide .carousel-slide-content {
+margin: 68px;
+}
+}
+
 
 
