@@ -19,6 +19,7 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
   --black-color: #000;
+  --primary-color: #ffea00;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -251,4 +252,12 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.underlined .default-content-wrapper > h2::after{
+    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    content: "";
+    display: block;
+    padding-top: 8px;
+    width: 84px;
 }
