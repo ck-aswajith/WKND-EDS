@@ -255,7 +255,7 @@ main .section.highlight {
 }
 
 main .section.underlined .default-content-wrapper > h2::after{
-    border-bottom: 2px solid var(--brandPrimary, #ffea00);
+    border-bottom: 2px solid var(--primary-color, #ffea00);
     content: "";
     display: block;
     padding-top: 8px;
