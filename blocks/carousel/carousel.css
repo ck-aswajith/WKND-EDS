@@ -199,7 +199,7 @@ top: 50%;
 }
 
 .carousel .carousel-slide .carousel-slide-content {
-margin: 68px;
+    margin: 400px auto 0;
 }
 }
 
