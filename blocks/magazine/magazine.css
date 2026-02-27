@@ -1,11 +1,42 @@
-.magazine > div:first-child {
+.magazine .magazine-row {
 display: grid;
 gap: 24px;
 grid-template-columns: 1fr;
 }
 
+.magazine ul li{
+    float: left;
+    list-style: none;
+    margin-bottom: 1em;
+    width: 100%;
+        border-left: 5px solid  #ebebeb;
+        font-weight: 400;
+        height: 90pt;
+        text-decoration: none;
+        padding: .5rem 1rem;
+}
+
+.magazine ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+.magazine ul li sub {
+        color: dimgray;
+        font-size: 9pt;
+        padding: 5px;
+        text-transform: uppercase;
+}
+
+.magazine ul li:hover {
+    border-left: 5px solid  var(--black-color);
+        background: var(--primary-color, #ffea00);
+        border-color: var(--black-color, #202020);
+}
+
 @media (width >= 900px) {
-.magazine > div:first-child {
+.magazine .magazine-row {
 gap: 64px;
 grid-template-columns: 3fr 1fr;
 }
